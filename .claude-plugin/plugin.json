@@ -1,0 +1,21 @@
+{
+  "name": "cowire",
+  "version": "0.1.0",
+  "description": "Hand work between Claude Code and Claude Cowork by capability. /cowire sets up two inbox folders and a routing ledger so the two Claude surfaces pass errands to each other — Code does files/git/shell, Cowork does browser/email/desktop apps. Duct tape until Anthropic ships native cross-surface coordination.",
+  "author": {
+    "name": "Georgios Grigoriadis",
+    "email": "ggrigo@gmail.com"
+  },
+  "homepage": "https://github.com/ggrigo/cowire",
+  "repository": "https://github.com/ggrigo/cowire",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "cowork",
+    "cross-surface",
+    "task-routing",
+    "workflow",
+    "handoff",
+    "errand-queue"
+  ]
+}

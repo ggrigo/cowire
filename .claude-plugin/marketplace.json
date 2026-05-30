@@ -1,0 +1,29 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "cowire",
+  "description": "Single-plugin marketplace for cowire — install via /plugin marketplace add ggrigo/cowire then /plugin install cowire@cowire.",
+  "owner": {
+    "name": "Georgios Grigoriadis",
+    "email": "ggrigo@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "cowire",
+      "description": "Hand work between Claude Code and Claude Cowork by capability. /cowire sets up two inbox folders (code/, cowork/) and a routing ledger so the two Claude surfaces pass errands to each other — Code does files/git/shell, Cowork does browser/email/desktop apps. Duct tape until Anthropic ships native cross-surface coordination.",
+      "author": {
+        "name": "Georgios Grigoriadis",
+        "email": "ggrigo@gmail.com"
+      },
+      "category": "workflow",
+      "source": "./",
+      "homepage": "https://github.com/ggrigo/cowire",
+      "tags": [
+        "cross-surface",
+        "task-routing",
+        "workflow",
+        "handoff",
+        "errand-queue"
+      ]
+    }
+  ]
+}

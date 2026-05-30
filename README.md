@@ -26,7 +26,18 @@ Today the bridge between them is *you* — you read Code's output, switch to Cow
 
 A worked example is in [`examples/`](examples/).
 
-## Adopt it
+## Install
+
+```
+/plugin marketplace add ggrigo/cowire
+/plugin install cowire@cowire
+```
+
+Then run `/cowire` — it sets up the two inboxes, drops in the ledger, and wires the sweeps for you.
+
+**Counted alternative:** `npx skills add ggrigo/cowire` installs via [skills.sh](https://www.skills.sh) (which lets us see real install numbers). The native `/plugin` path above is fully supported; this one just routes through a channel that counts installs.
+
+## Or set it up by hand
 
 1. Make the two folders: `mkdir -p code cowork`.
 2. Copy [`LEDGER.md`](LEDGER.md) in and tune it to your own tools.
@@ -38,7 +49,7 @@ A worked example is in [`examples/`](examples/).
 
 - **Not real-time.** Sweeps run on a schedule (minutes, not seconds). Urgent work doesn't belong here.
 - **Not a chat.** Errands are discrete units of work, not a back-and-forth. If a reply is needed, the receiver opens a new errand the other way.
-- **Not a product to install.** It's a pattern to copy — two folders and a convention.
+- **Not a managed service.** Whether you install the plugin or copy the folders by hand, it's a convention over a shared filesystem — nothing runs in the cloud.
 
 ## Built to be thrown away
 
