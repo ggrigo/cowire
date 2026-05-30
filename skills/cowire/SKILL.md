@@ -1,6 +1,6 @@
 ---
 name: cowire
-description: Set up and run Cowire — a filesystem wire between Claude Code and Claude Cowork. Invoking it scaffolds the workspace: it creates two inbox folders (cowire/code, cowire/cowork) and a routing ledger so the two Claude surfaces hand work to each other by capability — Code does files/git/shell/gh, Cowork does the authenticated browser/email/desktop apps. Invoke when the user wants Code and Cowork to coordinate, to set up cross-surface task handoff, or to drop or sweep an errand between the two surfaces.
+description: Set up and run Cowire — a filesystem wire between Claude Code and Claude Cowork. Invoking it scaffolds the workspace — it creates two inbox folders (cowire/code, cowire/cowork) and a routing ledger so the two Claude surfaces hand work to each other by capability, where Code does files/git/shell/gh and Cowork does the authenticated browser/email/desktop apps. Invoke when the user wants Code and Cowork to coordinate, to set up cross-surface task handoff, or to drop or sweep an errand between the two surfaces.
 ---
 
 # Cowire — Code ↔ Cowork errand routing
