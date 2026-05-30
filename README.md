@@ -21,7 +21,7 @@ Today the bridge between them is *you* — you read Code's output, switch to Cow
 
 - **Two inboxes** — `code/` and `cowork/`. Each folder is the inbox of whichever surface *picks work up*, not who drops it.
 - **One errand = one file** — `YYYY-MM-DD-HHMM-slug.md` with a little frontmatter (`from`, `to`, `status`, `opened`, `closed`) and a plain-English body written for a reader with no prior context.
-- **A routing ledger** ([`LEDGER.md`](LEDGER.md)) — says which kind of work lands cleanly on which surface. Short version: files / git / shell / `gh` → Code; browser / email / desktop apps → Cowork.
+- **A routing ledger** ([`cowire-ledger.md`](cowire-ledger.md)) — says which kind of work lands cleanly on which surface. Short version: files / git / shell / `gh` → Code; browser / email / desktop apps → Cowork.
 - **Each surface sweeps its own inbox** on a schedule, acts on open errands, and marks them `done` (or `dropped`, with a reason). Misrouted? It *bounces* — writes a new errand back the other way.
 
 A worked example is in [`examples/`](examples/).
@@ -40,7 +40,7 @@ Then run `/cowire` — it sets up the two inboxes, drops in the ledger, and wire
 ## Or set it up by hand
 
 1. Make the two folders: `mkdir -p code cowork`.
-2. Copy [`LEDGER.md`](LEDGER.md) in and tune it to your own tools.
+2. Copy [`cowire-ledger.md`](cowire-ledger.md) in and tune it to your own tools.
 3. On the **Code** side, run a `/loop` that sweeps `code/` and acts on open errands.
 4. On the **Cowork** side, set a `/schedule` task that sweeps `cowork/` (it runs locally in that folder, so it can read and write the files).
 5. To hand work across, drop a file in the *other* surface's folder. That's the whole protocol.
