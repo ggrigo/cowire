@@ -19,14 +19,29 @@ First check whether a `cowire/` directory already exists in the project.
    - `cowire/cowork/` — Claude Cowork's inbox (Code drops errands here)
 3. Write `cowire/cowire-ledger.md` using the **Routing ledger** content at the bottom of this skill. Tune it to the user's actual tools (their real MCPs, CLIs, and authenticated apps) rather than the generic list — ask what they use if it isn't obvious.
 4. Write a one-line `cowire/code/README.md` ("Code's inbox — Cowork drops errands here; Code sweeps and acts") and the same for `cowire/cowork/README.md`.
-5. Report what you created and the two sweep commands (next section).
+5. Then **finish the setup** (next section). Do not leave the user guessing — give exact, copy-paste steps for *both* surfaces.
 
 **If `cowire/` already exists**, don't re-scaffold — the user is invoking the skill to drop or sweep an errand. Proceed to the relevant section below.
 
-## Wiring the sweeps (tell the user after scaffolding)
+## Finish the setup — make the wire live (be prescriptive, not vague)
 
-- **Code side:** run a `/loop` that lists `cowire/code/`, acts on `status: open` errands, and marks them `done`.
-- **Cowork side:** set a `/schedule` task that sweeps `cowire/cowork/` (it runs locally in that folder, so it can read and write the files).
+After scaffolding, the wire exists but isn't running yet. Two sweeps switch it on — one per surface. **Tell the user clearly and explicitly what to do on each. Name the surface you're on, do the half you can, and hand them the exact command for the other half.** Replace `<cowire>` below with the real path you created (e.g. `/Projects/cowire`).
+
+End your message with a block shaped exactly like this:
+
+> **Cowire is wired up at `<cowire>/`. Two steps switch it on — do both:**
+>
+> **① In Claude Cowork** — *(if you are running in Cowork, create this now and confirm; otherwise tell the user to run it in Cowork)*
+> `/schedule every 15 minutes — sweep <cowire>/cowork/ for *.md with "status: open", do each errand, then set status: done and fill closed:`
+> This is Cowork's half. It persists across sessions.
+>
+> **② In Claude Code (your terminal)** — open this same folder and paste:
+> `/loop sweep <cowire>/code/ — for each *.md with "status: open", do the errand, then set status: done and fill closed:`
+> Leave that session running; it's Code's half. *(A Code `/loop` is session-bound — restart it each session you want the wire live.)*
+>
+> **That's it.** To hand work across, drop a markdown errand in the *other* surface's inbox; its sweep picks it up.
+
+Do whichever half belongs to the surface you're currently on (on Cowork, offer to create the `/schedule` task and do it; on Code, you can't start the user's interactive `/loop` for them, so give them the command). Always give the command for the other surface verbatim.
 
 ## Dropping an errand
 
