@@ -37,6 +37,8 @@ Then run `/cowire` — it sets up the two inboxes, drops in the ledger, and wire
 
 **Counted alternative:** `npx skills add ggrigo/cowire` installs via [skills.sh](https://www.skills.sh) (which lets us see real install numbers). The native `/plugin` path above is fully supported; this one just routes through a channel that counts installs.
 
+**One-pass bootstrap (agents / no session restart):** the `/cowire` skill only becomes callable after a session restart, so you can't install *and* scaffold in the same session. To do both in one go — or to bootstrap fully autonomously with no prior context — fetch and run [`BOOTSTRAP.md`](BOOTSTRAP.md). It's self-contained: no plugin, no restart.
+
 ## Or set it up by hand
 
 1. Make the two folders: `mkdir -p code cowork`.
